@@ -16,5 +16,7 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-  ]
+  ],
+  // Tests run under plain Node (`npm test`, native type stripping), not Metro, so keep them out of the app typecheck.
+  "exclude": ["node_modules", "**/*.test.ts"]
 }
